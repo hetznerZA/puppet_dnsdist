@@ -10,6 +10,7 @@
 class dnsdist::config (
   $webserver,
   $webserver_pass,
+  $carbonserver,
   $control_socket,
   $server_policy,
   $listen_addresses,

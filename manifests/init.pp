@@ -30,6 +30,7 @@
 class dnsdist (
   $webserver        = $dnsdist::params::webserver,
   $webserver_pass   = $dnsdist::params::webserver_pass,
+  $carbonserver     = $dnsdist::params::carbonserver,
   $control_socket   = $dnsdist::params::control_socket,
   $listen_addresses = $dnsdist::params::listen_addresses,
   $number_of_cpus   = $dnsdist::params::number_of_cpus,
@@ -53,6 +54,7 @@ class dnsdist (
   class { '::dnsdist::config':
     webserver        => $webserver,
     webserver_pass   => $webserver_pass,
+    carbonserver     => $carbonserver,
     control_socket   => $control_socket,
     server_policy    => $server_policy,
     listen_addresses => $listen_addresses,

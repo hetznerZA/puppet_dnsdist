@@ -1,6 +1,9 @@
 webserver("<%= @webserver %>", "<%= @webserver_pass %>")
 controlSocket("<%= @control_socket %>")
 setServerPolicy(<%= @server_policy %>)
+<% if @carbonserver -%>
+carbonServer('<%= @carbonserver %>', '<%= @geo_location %>', 30)
+<% end -%>
 <% @number_of_cpus.to_i.times do | i |-%>
 <% @listen_addresses.each do |listen_address| -%>
 <%  if @version == 12 -%>
