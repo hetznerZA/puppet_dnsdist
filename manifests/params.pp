@@ -11,6 +11,7 @@
 
 class dnsdist::params {
 
+  $carbonserver     = false
   $control_socket   = '127.0.0.1'
   $distribution     = 'ubuntu'
   $listen_addresses = '127.0.0.1'
